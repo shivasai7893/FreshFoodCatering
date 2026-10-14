@@ -1,150 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YOUR BUSINESS NAME | Catering Services</title>
-  <meta name="description" content="Tasty catering for weddings, birthdays and events. Order on WhatsApp.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fresh Food Catering | Hyderabad</title>
+<meta name="description" content="Fresh, hygienic and tasty catering for weddings, birthdays, corporate events and house functions in Hyderabad. Get a quote on WhatsApp.">
+<style>
+  :root{--brand:#b5380f;--brand-dark:#8d2a09;--gold:#e8a33d;--cream:#fff8f0;--ink:#2b2320;--muted:#6f625b;--wa:#25D366}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+  section{padding:70px 0}
+  .section-title{text-align:center;margin-bottom:38px}
+  .section-title h2{font-size:2rem;color:var(--brand)}
+  .section-title p{color:var(--muted);margin-top:6px}
+  .section-title .bar{width:60px;height:3px;background:var(--gold);margin:12px auto 0;border-radius:3px}
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  nav{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+  nav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:800;font-size:1.25rem;color:var(--brand);text-decoration:none}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav ul a{text-decoration:none;font-weight:600;font-size:.95rem}
+  nav ul a:hover{color:var(--brand)}
+  .nav-cta{background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:9px 18px;border-radius:30px;font-size:.9rem}
+  @media(max-width:760px){nav ul{display:none}}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #333;
-      line-height: 1.6;
-    }
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 30px;border-radius:40px;transition:.2s;border:2px solid transparent;cursor:pointer;font-size:1rem}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{background:#1ebe5a;transform:translateY(-2px)}
+  .btn-ghost{border-color:#fff;color:#fff}
+  .btn-ghost:hover{background:#fff;color:var(--brand)}
 
-    header {
-      background: #b5380f;
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+  .hero{background:#4a2010;color:#fff;text-align:center;padding:110px 0 100px;background-size:cover;background-position:center}
+  .hero small{letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .hero h1{font-size:clamp(2rem,5vw,3.4rem);margin:14px 0;line-height:1.2}
+  .hero p{max-width:640px;margin:0 auto 28px;font-size:1.1rem;opacity:.95}
+  .hero .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-    section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    section h2 {
-      text-align: center;
-      color: #b5380f;
-      margin-bottom: 20px;
-    }
+  .stats{background:var(--brand);color:#fff;padding:34px 0}
+  .stats .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;text-align:center}
+  .stats strong{display:block;font-size:2rem;color:var(--gold)}
 
-    .btn {
-      display: inline-block;
-      background: #25D366;
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 26px;
-      border-radius: 30px;
-      font-weight: bold;
-      margin-top: 18px;
-    }
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .card{background:var(--cream);border-radius:14px;padding:28px 22px;text-align:center;transition:.2s;border:1px solid #f1e1cf}
+  .card:hover{transform:translateY(-5px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+  .card .icon{font-size:2.3rem;margin-bottom:10px}
+  .card h3{color:var(--brand);margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.95rem}
 
-    .services { list-style: none; text-align: center; }
-    .services li {
-      display: inline-block;
-      background: #fdf0e8;
-      margin: 6px;
-      padding: 10px 18px;
-      border-radius: 20px;
-    }
+  .menu{background:var(--cream)}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+  .menu-box{background:#fff;border-radius:14px;padding:24px;border-top:4px solid var(--gold);box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .menu-box h3{color:var(--brand);margin-bottom:10px}
+  .menu-box ul{list-style:none}
+  .menu-box li{padding:6px 0;border-bottom:1px dashed #eadcc9;font-size:.96rem}
+  .menu-box li:last-child{border:none}
+  .note{text-align:center;color:var(--muted);margin-top:24px;font-size:.95rem}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-    }
-    .gallery img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+  .gallery figure{position:relative;overflow:hidden;border-radius:14px;height:260px;background:#f3e3d3}
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .gallery figure:hover img{transform:scale(1.07)}
+  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;color:#fff;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.7))}
 
-    .contact { text-align: center; }
+  .steps{background:var(--cream)}
+  .step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;text-align:center}
+  .step .num{width:52px;height:52px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;font-size:1.3rem;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+  .step p{color:var(--muted);font-size:.95rem}
 
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 25px 20px;
-    }
+  .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .review{background:#fff;border:1px solid #f1e1cf;border-radius:14px;padding:24px;box-shadow:0 4px 14px rgba(0,0,0,.04)}
+  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:8px}
+  .review p{font-style:italic;color:var(--muted)}
+  .review b{display:block;margin-top:12px}
 
-    .wa-float {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      background: #25D366;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 14px 20px;
-      border-radius: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 99;
-    }
-  </style>
+  .faq{background:var(--cream)}
+  .faq-list{max-width:760px;margin:0 auto}
+  details{background:#fff;border-radius:10px;padding:16px 20px;margin-bottom:12px;border:1px solid #f1e1cf}
+  summary{cursor:pointer;font-weight:700;color:var(--brand)}
+  details p{margin-top:10px;color:var(--muted)}
+
+  .enquiry{background:linear-gradient(135deg,var(--brand),var(--brand-dark));color:#fff}
+  .enquiry .section-title h2{color:#fff}
+  .enquiry .section-title p{color:#f6dccb}
+  form{max-width:620px;margin:0 auto;background:#fff;color:var(--ink);padding:28px;border-radius:16px;display:grid;gap:14px}
+  form label{font-weight:600;font-size:.9rem}
+  form input,form select,form textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font:inherit;margin-top:4px}
+  form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){form .row{grid-template-columns:1fr}}
+  form button{border:none}
+  .call-line{text-align:center;margin-top:20px}
+  .call-line a{color:var(--gold);font-weight:700}
+
+  footer{background:#1f1815;color:#cfc4bc;padding:40px 0 20px;text-align:center}
+  footer .logo{color:#fff}
+  footer p{margin-top:8px;font-size:.92rem}
+  footer .copy{margin-top:22px;font-size:.82rem;color:#8c7f77}
+
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:200;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:14px 20px;border-radius:40px;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+  .wa-float:hover{background:#1ebe5a}
+</style>
 </head>
-
 <body>
 
-  <!-- TOP BANNER -->
-  <header>
-    <h1>YOUR BUSINESS NAME</h1>
-    <p>Fresh, tasty catering for weddings, parties and office events</p>
-    <a class="btn"
-       href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20enquire%20about%20catering"
-       target="_blank" rel="noopener">Chat on WhatsApp</a>
-  </header>
-
-  <!-- SERVICES -->
-  <section>
-    <h2>Our Services</h2>
-    <ul class="services">
-      <li>Weddings</li>
-      <li>Birthday Parties</li>
-      <li>Corporate Events</li>
-      <li>House Functions</li>
-      <li>Bulk Orders</li>
+<nav>
+  <div class="container">
+    #top🍛 <span data-biz>Fresh Food Catering</span></a>
+    <ul>
+      <li>services">Services</a></li>
+      <li>#menuMenu</a></li>
+      <li>ery">Gallery</a></li>
+      <li>#reviewsReviews</a></li>
+      <li>#faqFAQ</a></li>
     </ul>
-  </section>
+    <a class="nav-cta" data-wa="Hi, I want to enquire about catering.">WhatsApp Us</a>
+  </div>
+</nav>
 
-  <!-- PHOTOS -->
-  <section>
-    <h2>Our Food</h2>
-    <div class="gallery">
-      <img src="images/food1.jpg" alt="Catering food 1">
-      <img src="images/food2.jpg" alt="Catering food 2">
-      <img src="images/food3.jpg" alt="Catering food 3">
-      <img src="images/food4.jpg" alt="Catering food 4">
-      <img src="images/food5.jpg" alt="Catering food 5">
-      <img src="images/food6.jpg" alt="Catering food 6">
+<header class="hero" id="top">
+  <div class="container">
+    <small>Hyderabad's trusted caterers</small>
+    <h1>Fresh, Tasty Food for Every Celebration</h1>
+    <p>Weddings, birthdays, corporate lunches and house functions. Hygienic cooking, on-time delivery and menus made to your taste.</p>
+    <div class="actions">
+      <a class="btn btn-wa" data-wa="Hi, I want a free quote for catering.">Get Free Quote on WhatsApp</a>
+      #menuView Menu</a>
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- CONTACT -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Call / WhatsApp: <a href="tel:+919999999999">+91 99999 99999</a></p>
-    <a class="btn"
-       href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20enquire%20about%20catering"
-       target="_blank" rel="noopener">Message us on WhatsApp</a>
-  </section>
+<div class="stats">
+  <div class="container">
+    <div><strong>500+</strong>Events Served</div>
+    <div><strong>10+</strong>Years Experience</div>
+    <div><strong>100%</strong>Fresh Ingredients</div>
+    <div><strong>24 hrs</strong>Quick Quote Reply</div>
+  </div>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
-    &copy; 2026 YOUR BUSINESS NAME. Hyderabad.
-  </footer>
+<section id="services">
+  <div class="container">
+    <div class="section-title"><h2>Our Catering Services</h2><div class="bar"></div><p>One team for every kind of occasion</p></div>
+    <div class="cards">
+      <div class="card"><div class="icon">💍</div><h3>Weddings</h3><p>Grand buffets and traditional meals for engagements, weddings and receptions.</p></div>
+      <div class="card"><div class="icon">🎂</div><h3>Birthday Parties</h3><p>Tasty menus for kids and family parties, with snacks, mains and desserts.</p></div>
+      <div class="card"><div class="icon">🏢</div><h3>Corporate Events</h3><p>Office lunches, meetings and conferences, delivered on time every time.</p></div>
+      <div class="card"><div class="icon">🏠</div><h3>House Functions</h3><p>Housewarming, pooja and family gatherings, cooked fresh for your guests.</p></div>
+      <div class="card"><div class="icon">📦</div><h3>Bulk Orders</h3><p>Food boxes and large-quantity orders packed neatly and delivered hot.</p></div>
+    </div>
+  </div>
+</section>
 
-  <!-- FLOATING WHATSAPP BUTTON (stays on screen while scrolling) -->
-  <a class="wa-float"
-     href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20enquire%20about%20catering"
-     target="_blank" rel="noopener">WhatsApp</a>
+<section class="menu" id="menu">
+  <div class="container">
+    <div class="section-title"><h2>Popular Menu</h2><div class="bar"></div><p>A sample of what we cook. Custom menus on request.</p></div>
+    <div class="menu-grid">
+      <div class="menu-box"><h3>🥗 Starters</h3><ul><li>Paneer Tikka</li><li>Veg Manchurian</li><li>Chicken 65</li><li>Hara Bhara Kebab</li></ul></div>
+      <div class="menu-box"><h3>🍛 Main Course</h3><ul><li>Hyderabadi Dum Biryani</li><li>Butter Chicken</li><li>Paneer Butter Masala</li><li>Dal Tadka</li></ul></div>
+      <div class="menu-box"><h3>🍞 Breads &amp; Rice</h3><ul><li>Butter Naan</li><li>Rumali Roti</li><li>Jeera Rice</li><li>Veg Pulao</li></ul></div>
+      <div class="menu-box"><h3>🍨 Desserts</h3><ul><li>Gulab Jamun</li><li>Double Ka Meetha</li><li>Ice Cream</li><li>Rasmalai</li></ul></div>
+    </div>
+    <p class="note">Veg and non-veg menus available. Tell us your guest count and budget and we will plan the rest.</p>
+  </div>
+</section>
 
+<section id="gallery">
+  <div class="container">
+    <div class="section-title"><h2>Our Food &amp; Events</h2><div class="bar"></div><p>A taste of what is on your table</p></div>
+    <div class="gallery">
+      <figure><img data-img="photo-1680993032090-1ef7ea9b51e5" alt="Traditional Indian thali"><figcaption>Traditional Thali</figcaption></figure>
+      <figure><img data-img="photo-1701579231305-d84d8af9a3fd" alt="Chicken biryani"><figcaption>Chicken Biryani</figcaption></figure>
+      <figure><img data-img="photo-1680359873864-43e89bf248ac" alt="Veg thali"><figcaption>Veg Thali</figcaption></figure>
+      <figure><img data-img="photo-1729708475294-fb3be3809dcb" alt="Catering buffet setup"><figcaption>Buffet Setup</figcaption></figure>
+      <figure><img data-img="photo-1545447859-096b1442cd4b" alt="Dinner buffet"><figcaption>Dinner Buffet</figcaption></figure>
+      <figure><img data-img="photo-1681546898018-961e2a05c6fa" alt="Dum biryani"><figcaption>Dum Biryani</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="container">
+    <div class="section-title"><h2>How It Works</h2><div class="bar"></div><p>Ordering is simple</p></div>
+    <div class="step-grid">
+      <div class="step"><div class="num">1</div><h3>Message Us</h3><p>Tell us the date, place and number of guests on WhatsApp.</p></div>
+      <div class="step"><div class="num">2</div><h3>Pick Your Menu</h3><p>We share menu options and a clear quote. No hidden charges.</p></div>
+      <div class="step"><div class="num">3</div><h3>Relax &amp; Enjoy</h3><p>We cook fresh and deliver on time. You enjoy the event.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div class="section-title"><h2>What Customers Say</h2><div class="bar"></div></div>
+    <div class="review-grid">
+      <div class="review"><div class="stars">★★★★★</div><p>"The biryani was the highlight of our function. Food was hot and arrived right on time."</p><b>Customer, Hyderabad</b></div>
+      <div class="review"><div class="stars">★★★★★</div><p>"Very professional team. They handled our office lunch for 100 people without any problem."</p><b>Corporate Client</b></div>
+      <div class="review"><div class="stars">★★★★★</div><p>"Tasty food and fair price. Our guests kept asking who the caterer was."</p><b>Wedding Client</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-title"><h2>Frequently Asked Questions</h2><div class="bar"></div></div>
+    <div class="faq-list">
+      <details><summary>How early should I book?</summary><p>For weddings and large events, please book at least 2 weeks ahead. For small parties, a few days is usually fine.</p></details>
+      <details><summary>Do you provide both veg and non-veg food?</summary><p>Yes. We offer veg, non-veg and mixed menus.</p></details>
+      <details><summary>What is the minimum order?</summary><p>Message us your guest count and we will tell you what works for your event.</p></details>
+      <details><summary>Which areas do you serve?</summary><p>We serve Hyderabad and nearby areas. Message us your location to confirm.</p></details>
+      <details><summary>How do I get a price?</summary><p>Fill in the form below or message us on WhatsApp. We reply with a quote based on your menu and guest count.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="enquiry" id="contact">
+  <div class="container">
+    <div class="section-title"><h2>Get a Free Quote</h2><div class="bar"></div><p>Fill in the details and we will receive them on WhatsApp</p></div>
+    <form id="quoteForm">
+      <div class="row">
+        <div><label>Your Name<input type="text" id="fName" required placeholder="Your name"></label></div>
+        <div><label>Event Type
+          <select id="fEvent"><option>Wedding</option><option>Birthday Party</option><option>Corporate Event</option><option>House Function</option><option>Bulk Order</option><option>Other</option></select></label></div>
+      </div>
+      <div class="row">
+        <div><label>Event Date<input type="date" id="fDate"></label></div>
+        <div><label>Number of Guests<input type="number" id="fGuests" min="1" placeholder="e.g. 100"></label></div>
+      </div>
+      <div><label>Food Preference
+        <select id="fFood"><option>Veg</option><option>Non-Veg</option><option>Both</option></select></label></div>
+      <div><label>Message (optional)<textarea id="fMsg" rows="3" placeholder="Location, special requests..."></textarea></label></div>
+      <button type="submit" class="btn btn-wa">Send on WhatsApp</button>
+    </form>
+    <p class="call-line">Prefer to call? <a data-tel href="#"><span data-phone>+91 99999 99999</span></a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a href="#">🍛 <span data-biz>Fresh Food Catering</span></a>
+    <p>Wedding, party and corporate catering in Hyderabad, Telangana</p>
+    <p>WhatsApp / Call: <span data-phone>+91 99999 99999</span></p>
+    <p class="copy">&copy; 2026 <span data-biz>Fresh Food Catering</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa="Hi, I want to enquire about catering.">💬 WhatsApp</a>
+
+<script>
+  /* ============ EDIT ONLY THIS BLOCK ============ */
+  var CONFIG = {
+    phone:   "919999999999",        // 91 + your 10-digit number. No +, no spaces.
+    display: "+91 99999 99999",     // how the number is shown on the page
+    name:    "Fresh Food Catering"  // your business name
+  };
+  /* ============================================== */
+
+  var WA  = "https:" + "//wa.me/";
+  var IMG = "https:" + "//images.unsplash.com/";
+  var PH  = "https:" + "//placehold.co/";
+
+  function waLink(msg){ return WA + CONFIG.phone + "?text=" + encodeURIComponent(msg); }
+
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = waLink(a.getAttribute("data-wa"));
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  document.querySelectorAll("[data-biz]").forEach(function(e){ e.textContent = CONFIG.name; });
+  document.querySelectorAll("[data-phone]").forEach(function(e){ e.textContent = CONFIG.display; });
+  document.querySelectorAll("[data-tel]").forEach(function(a){ a.href = "tel:+" + CONFIG.phone; });
+  document.title = CONFIG.name + " | Catering in Hyderabad";
+
+  /* Gallery photos (with fallback if a photo does not load) */
+  document.querySelectorAll("img[data-img]").forEach(function(img){
+    img.loading = "lazy";
+    img.onerror = function(){ this.onerror = null; this.src = PH + "800x600/f3e3d3/b5380f?text=Food+Photo"; };
+    img.src = IMG + img.getAttribute("data-img") + "?auto=format&fit=crop&w=800&q=70";
+  });
+
+  /* Hero background photo */
+  var heroPhoto = IMG + "photo-1555244162-803834f70033?auto=format&fit=crop&w=1600&q=70";
+  document.getElementById("top").style.backgroundImage =
+    "linear-gradient(rgba(30,12,4,.62),rgba(30,12,4,.62)), url(" + heroPhoto + ")";
+
+  /* Quote form -> WhatsApp */
+  document.getElementById("quoteForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var v = function(id){ return document.getElementById(id).value.trim(); };
+    var msg = "Hi, I want a catering quote.\n" +
+      "Name: " + v("fName") + "\n" +
+      "Event: " + v("fEvent") + "\n" +
+      "Date: " + (v("fDate") || "Not decided") + "\n" +
+      "Guests: " + (v("fGuests") || "Not decided") + "\n" +
+      "Food: " + v("fFood") + "\n" +
+      "Message: " + (v("fMsg") || "-");
+    window.open(waLink(msg), "_blank", "noopener");
+  });
+</script>
 </body>
 </html>
